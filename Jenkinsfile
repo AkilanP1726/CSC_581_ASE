@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'python -m py_compile mathutils.py'
+                bat 'python -m py_compile mathutils.py'
             }
         }
         stage('Test') {
             steps {
-                sh 'python -m pytest --junit-xml test-reports/results.xml test_math_utils.py'
+                bat 'python -m pytest --junit-xml test-reports/results.xml test_math_utils.py'
             }
             post {
                 always {
