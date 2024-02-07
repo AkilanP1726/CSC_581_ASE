@@ -13,4 +13,6 @@ class MathUtils:
 
     @staticmethod
     def divide(a, b):
-        return a / b if b != 0 else -1.0
+        if b == 0:
+            return -1.0  # Handling division by zero
+        return a / b
