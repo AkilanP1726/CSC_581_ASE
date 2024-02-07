@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                bat 'python -m py_compile mathutils.py'
+                bat 'python -m py_compile math_utils.py'
             }
         }
         stage('Test') {
